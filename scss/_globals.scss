@@ -1,0 +1,47 @@
+@use 'helpers' as *;
+
+body.is-lock {
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  min-height: 100dvh;
+  font-family: var(--font-family);
+  color: var(--color-gray);
+  background-color: var(--color-bg);
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    
+    background-color: var(--color-bg);
+    background-image:
+      radial-gradient(75rem 50rem at 22% 0%, rgba(242, 134, 178, 0.24), transparent 70%),
+      radial-gradient(65rem 45rem at 78% 14%, rgba(255, 188, 196, 0.18), transparent 70%),
+      radial-gradient(85rem 60rem at 50% 100%, rgba(174, 106, 168, 0.22), transparent 75%),
+      linear-gradient(180deg, #10050e 0%, #1a0913 55%, #0e040d 100%);
+    background-repeat: no-repeat;
+  }
+}
+
+h1 {
+  font-size: fluid(32, 64);
+}
+
+h2 {
+  font-size: fluid(24, 48);
+  font-weight: 400;
+  color: var(--color-white);
+}
+
+h3 {
+  font-size: fluid(12, 24);
+}
+
+p {
+  font-family: var(--font-secondary);
+  font-size: fluid(12, 18);
+}

@@ -1,0 +1,37 @@
+@use 'helpers' as *;
+
+$container-width: 1280;
+$container-padding-max: 80;
+$container-padding-min: 16;
+
+:root {
+  --font-family: 'Cormorant Garamond', serif;
+  --font-secondary: 'Manrope', sans-serif;
+  --font-tertiary: 'JetBrains Mono', monospace;
+
+  --color-bg: #140911;
+  --color-bg-top: #10050E;
+  --color-bg-mid: #1A0913;
+  --color-bg-bottom: #0E040D;
+
+  --color-card: #2A1522;
+  --color-panel: #23121D;
+  --color-secondary: #331A28;
+
+  --color-white: #F8EFF4;
+  --color-gray: #C1A9B8;
+  --color-dark: #241019;
+
+  --color-pink: #FF99C2;
+  --color-pink-light: #FFBCC4;
+  --color-pink-dark: #6A3C52;
+
+  --container-padding-x: #{fluid($container-padding-min, $container-padding-max)};
+
+  --section-padding-y: #{fluid(30, 80)};
+
+  --header-height: #{fluid(65, 85)};
+
+  --border-radius-sm: #{rem(14)};
+  --border-radius-md: #{rem(22)};
+}

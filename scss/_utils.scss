@@ -1,0 +1,35 @@
+@use 'helpers' as *;
+@use 'variables' as *;
+
+section[id] {
+  scroll-margin-top: calc(var(--header-height) + rem(8));
+}
+
+.container {
+  width: 100%;
+  max-width: #{rem($container-width + $container-padding-max * 2)};
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.subtitle {
+  font-size: rem(12);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-pink-light);
+}
+
+.section-padding-y {
+  padding-block: var(--section-padding-y);
+}
+
+.tag {
+  white-space: nowrap;
+  font-family: var(--font-tertiary);
+  font-size: fluid(11, 14);
+  color: var(--color-pink-light);
+  padding: rem(4) rem(8);
+  background-color: var(--color-panel);
+  border: rem(1) solid rgba(106, 60, 82, 0.3);
+  border-radius: var(--border-radius-sm);
+}

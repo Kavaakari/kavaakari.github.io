@@ -1,0 +1,121 @@
+@use '../helpers' as *;
+
+.projects {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(32, 48);
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  &__title {
+    font-weight: 400;
+    color: var(--color-white);
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(24);
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-card);
+    border: rem(1) solid rgba(106, 60, 82, 0.8);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: 
+      0 rem(16) rem(40) rgba(255, 153, 194, 0.08),
+      0 0 rem(24) rgba(255, 153, 194, 0.04);
+    transition: 
+      transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+      box-shadow 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    @include tablet-up {
+      display: grid;
+      grid-template-columns: 45% 55%;
+    }
+
+    @include hover {
+      transform: translateY(rem(4)) scale(0.98);
+
+      box-shadow: 
+        0 rem(4) rem(14) rgba(255, 153, 194, 0.18),
+        0 0 rem(12) rgba(255, 153, 194, 0.12);
+    }
+
+    &-preview {
+      aspect-ratio: 10 / 6;
+
+      @include tablet-up {
+        aspect-ratio: 12 / 11;
+      }
+
+      @include laptop-up {
+        aspect-ratio: 16 / 11;
+      }
+    }
+
+    &-image {
+      transition: transform 0.3s ease;
+      @include hover {
+        transform: scale(1.02);
+      }
+    }
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      padding: fluid(14, 24) fluid(16, 30);
+      row-gap: rem(14);
+    }
+
+    &-meta {
+      display: flex;
+      align-items: center;
+      column-gap: rem(12);
+      font-size: fluid(12, 18);
+      font-family: var(--font-tertiary);
+      text-transform: uppercase;
+    }
+
+    &-badge {
+      color: var(--color-pink);
+      padding: rem(4) rem(8);
+      background-color: rgba(255, 153, 194, 0.08);
+      border: rem(1) solid rgba(255, 153, 194, 0.25);;
+      border-radius: var(--border-radius-md);
+    }
+
+    &-date {
+      opacity: 0.8;
+    }
+
+    &-link {
+      transition: color .3s ease;
+
+      @include hover {
+        color: var(--color-pink-light);
+      }
+    }
+
+    &-link {
+      color: var(--color-white);
+      text-decoration: none;
+    }
+
+    &-stack {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: auto;
+      gap: rem(24);
+    }
+  }
+}
