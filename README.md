@@ -1,4 +1,4 @@
-# Vladyslav Petruk — Front-end Developer Portfolio
+# Vladyslav Petruk - Front-end Developer Portfolio
 
 > Personal portfolio showcasing responsive, high-performance web layouts built with semantic HTML5, modular SCSS (BEM), and vanilla JavaScript.
 
@@ -6,9 +6,9 @@
 - **[kavaakari.github.io](https://kavaakari.github.io/)**
 
 ## 💼 Featured Projects
-- **[Tempo Valley](https://kavaakari.github.io/tempo-valley/)** — Promo landing page built with semantic HTML5 and modular SCSS.
-- **[Aurora Craft](https://kavaakari.github.io/aurora-craft/)** — Editorial landing page focused on clean typography and cross-browser styling.
-- **[Magic River Quest](https://kavaakari.github.io/magic-river-quest/)** — Responsive landing page with native CSS, fluid `clamp()` sizing, and Swiper.js.
+- **[Tempo Valley](https://kavaakari.github.io/tempo-valley/)** - Promo landing page built with semantic HTML5 and modular SCSS.
+- **[Aurora Craft](https://kavaakari.github.io/aurora-craft/)** - Editorial landing page focused on clean typography and cross-browser styling.
+- **[Magic River Quest](https://kavaakari.github.io/magic-river-quest/)** - Responsive landing page with native CSS, fluid `clamp()` sizing, and Swiper.js.
 
 ## 🛠 Core Toolkit
 - **Markup:** HTML5 / Semantics, accessibility basics (ARIA)
