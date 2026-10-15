@@ -1,0 +1,94 @@
+@use '../helpers' as *;
+
+.experience-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+
+  @include laptop-up {
+    grid-template-columns: 
+      minmax(0, 1fr)
+      minmax(0, 1.8fr)
+      minmax(0, 1fr);
+  }
+
+  &__company,
+  &__details {
+    padding-bottom: var(--space-md);
+    border-bottom: var(--border);
+
+    @include laptop-up {
+      padding-bottom: 0;
+      border-bottom: none;
+      border-right: var(--border);
+      padding-right: var(--space-sm);
+    }
+  }
+
+  &__company {
+    @include flex-column;
+    
+    &-link {
+      column-gap: rem(8);
+      color: inherit;
+      transition: 
+        transform var(--transition-fast), 
+        color var(--transition-fast);
+      
+      
+      &::after {
+        content: '';
+        width: rem(8);
+        height: rem(10);
+        clip-path: var(--arrow-right);
+        background-color: currentColor;
+        transform: rotate(-135deg);
+      }
+
+      @include hover {
+        transform: scale(1.03);
+        color: var(--color-accent-light);
+      }
+    }
+
+    &-period {
+      align-self: flex-start;
+      column-gap: rem(8);
+    }
+  }
+
+  &__details {
+    @include flex-column;
+  }
+
+  &__technologies {
+    @include flex-column;
+
+    &-list {
+      display: flex;
+      gap: var(--space-sm);
+      flex-wrap: wrap;
+    }
+  }
+
+  &__duties {
+    @include flex-column(rem(8));
+  }
+
+  &__duty {
+    position: relative;
+    padding-left: rem(16);
+
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      width: rem(8);
+      height: rem(8);
+      top: rem(8);
+      left: 0;
+      border-radius: 50%;
+      background-color: var(--color-accent);
+    }
+  }
+}

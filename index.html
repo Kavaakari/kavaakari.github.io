@@ -3,499 +3,685 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Vladyslav Petruk - Frontend Developer specializing in responsive websites. Explore my projects, professional experience, and technical skills."
+  >
+  <meta name="theme-color" content="#0e0820">
+  <link rel="canonical" href="https://kavaakari.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Vladyslav Petruk | Frontend Developer">
+  <meta
+    property="og:description"
+    content="Explore my frontend projects, professional experience, and technical skills."
+  >
+  <meta property="og:url" content="https://kavaakari.github.io/">
+  <meta property="og:site_name" content="Vladyslav Petruk Portfolio">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="image/favicons/favicon.ico" sizes="any">
+  <link rel="icon" href="image/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="image/favicons/apple-touch-icon.png">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="shortcut icon" href="image/avatar.png" type="image/png">
-  <title>Kavaakari · Front-end Engineer</title>
+  <title>Vladyslav Petruk - Frontend Developer</title>
 </head>
 <body>
   <header class="header">
     <div class="header__container container">
-      <a 
+      <a
         class="header__logo"
-        href="#"
+        href="#home"
       >
-        Kavaakari 川明
+        <img
+          class="header__logo-icon"
+          src="image/logo/logo.png"
+          alt="Vladyslav Petruk - Home"
+          width="50"
+          height="50"
+        />
       </a>
-      <nav class="header__menu menu" id="primary-navigation" aria-label="Main navigation">
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a
-              class="menu__link"
-              href="#"
-            >
-              Home
-            </a>
-          </li>
-          <li class="menu__item">
-            <a
-              class="menu__link"
-              href="#about"
-            >
-              About me
-            </a>
-          </li>
-          <li class="menu__item">
-            <a
-              class="menu__link"
-              href="#projects"
-            >
-              Projects
-            </a>
-          </li>
-          <li class="menu__item">
-            <a
-              class="menu__link"
-              href="#work"
-            >
-              Work Experience
-            </a>
-          </li>
-          <li class="menu__item">
-            <a
-              class="menu__link"
-              href="#contact"
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      </nav>
       <button
         class="header__burger burger"
         type="button"
-        aria-label="Open menu"
+        aria-label="Menu"
         aria-expanded="false"
         aria-controls="primary-navigation"
       >
         <span class="burger__line" aria-hidden="true"></span>
       </button>
+      <div class="header__menu menu" id="primary-navigation">
+        <nav class="menu__nav" aria-label="Main navigation">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a
+                class="menu__link"
+                href="#home"
+              >
+               Home
+              </a>
+            </li>
+            <li class="menu__item">
+              <a
+                class="menu__link"
+                href="#projects"
+              >
+               Projects
+              </a>
+            </li>
+            <li class="menu__item">
+              <a
+                class="menu__link"
+                href="#experience"
+              >
+               Experience
+              </a>
+            </li>
+            <li class="menu__item">
+              <a
+                class="menu__link"
+                href="#skills"
+              >
+               Skills
+              </a>
+            </li>
+            <li class="menu__item">
+              <a
+                class="menu__link"
+                href="#contact"
+              >
+               Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__status">
+          <span class="header__dot"></span>
+          <span class="header__text">Available for work</span>
+        </div>
+      </div>
     </div>
   </header>
   <main class="main">
-    <section class="hero">
+    <section class="hero section-padding-y" id="home">
       <div class="hero__container container">
-        <p class="hero__greeting">
-          Based in ukraine • open to remote
-        </p>
-        <div class="hero__avatar">
-          <img
-            class="hero__avatar-image"
-            src="image/avatar.png"
-            alt="Petruk Vladyslav"
-            width="350"
-            height="350"
-          />
-        </div>
-        <div class="hero__info">
-          <p class="hero__subtitle">
-            Vladyslav Petruk
-          </p>
-          <h2 class="hero__title">
-            Clean code. Resilient <span>interfaces.</span>
-          </h2>
-          <p class="hero__description">
-            Semantic HTML, modular SCSS, and responsive layouts that simply work the way they should.
-          </p>
-        </div>
-        <dl class="hero__cards">
-          <div class="hero__card">
-            <dt class="hero__card-label">
-              Status
-            </dt>
-            <dd class="hero__card-value hero__card-value--status">
-              <span class="hero__card-dot"></span>
-              <span>
-                Available for work
-              </span>
-            </dd>
+        <div class="hero__content">
+          <div class="hero__badge badge">
+            <span class="hero__dot"></span>
+            <span class="hero__city">Irpin, Ukraine</span>
+            <span class="hero__divider" aria-hidden="true">/</span>
+            <span class="hero__role">Frontend Developer</span>
           </div>
-          <div class="hero__card">
-            <dt class="hero__card-label">
-              Role
-            </dt>
-            <dd class="hero__card-value">
-              Front-end Developer
-            </dd>
-          </div>
-          <div class="hero__card">
-            <dt class="hero__card-label">
-              Core Focus
-            </dt>
-            <dd class="hero__card-value">
-              SCSS / BEM / JavaScript (ES6+, DOM)
-            </dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-    <section class="about section-padding-y" id="about">
-      <div class="about__container container">
-        <div class="about__header">
-          <p class="about__subtitle subtitle">
-            About Me
-          </p>
-          <h2 class="about__title">
-            Engineering & Approach
-          </h2>
-        </div>
-        <div class="about__content">
-          <div class="about__body">
-            <p class="about__text about__text--lead">
-              Front-end developer based in Ukraine. I build high-performance, responsive web interfaces with a relentless focus on clean DOM architecture, fluid typography, and precise design implementation.
-            </p>
-            <p class="about__text">
-              My workflow is rooted in semantic HTML5, strict BEM structure, and modular SCSS. I rely on modern vanilla JavaScript for interface logic, avoiding bulky libraries where lightweight native code delivers a cleaner, faster result.
+          <div class="hero__main">
+            <h1 class="hero__title">
+              Hello! My name is
+              <span class="hero__title-accent">Vladyslav Petruk</span>
+            </h1>
+            <p class="hero__typewriter">
+              <span class="hero__text" aria-hidden="true"></span>
+              <span class="visually-hidden">I'm a frontend developer. I can do some great things for you.</span>
             </p>
           </div>
-          <div class="about__skills">
-            <span class="about__skills-title">
-              Core Toolkit
-            </span>
-            <ul class="about__tags" role="list">
-              <li class="about__tag tag">HTML5 / Semantics</li>
-              <li class="about__tag tag">SCSS / SASS</li>
-              <li class="about__tag tag">BEM Methodology</li>
-              <li class="about__tag tag">Mobile-First / RWD</li>
-              <li class="about__tag tag">CSS Custom Properties</li>
-              <li class="about__tag tag">Figma (Dev Mode)</li>
-              <li class="about__tag tag">Git / GitHub</li>
-              <li class="about__tag tag">JavaScript (ES6+, DOM)</li>
-            </ul>
+          <div class="hero__action">
+            <a
+              class="hero__projects"
+              href="#projects"
+            >
+              View Projects
+            </a>
+            <a
+              class="hero__contact"
+              href="#contact"
+            >
+              Contact
+            </a>
+            <a
+              class="hero__resume"
+              href="assets/cv/Vladyslav_Petruk_CV.pdf"
+              target="_blank"
+            >
+              Resume
+            </a>
           </div>
         </div>
       </div>
     </section>
     <section class="projects section-padding-y" id="projects">
       <div class="projects__container container">
-        <div class="projects__header">
-          <p class="projects__subtitle subtitle">Featured Works</p>
-          <h2 class="projects__title">Selected Projects</h2>
-        </div>
-        <ul class="projects__cards">
-          <li class="projects__card">
-            <a
-              class="projects__card-preview" 
-              href="https://kavaakari.github.io/tempo-valley/"
-              target="_blank"
-              rel="noopener noreferrer"
-              tabindex="-1"
-              aria-hidden="true"
-            >
-              <img
-                class="projects__card-image"
-                src="image/projects/image-card-1.jpg"
-                alt="Project preview"
-                width="800"
-                height="400"
-                loading="lazy"
-              />
-            </a>
-            <div class="projects__card-body">
-              <div class="projects__card-meta">
-                <span class="projects__card-badge">
-                  Commercial
-                </span>
-                <time
-                  class="projects__card-date"
-                  datetime="2026"
-                >
-                  2026
-                </time>
-              </div>
-              <h3 class="projects__card-title">
-                <a
-                  class="projects__card-link"
-                  href="https://github.com/Kavaakari/tempo-valley"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>Tempo Valley</span>
-                </a>
-              </h3>
-              <p class="projects__card-description">
-                Responsive promo landing page built with semantic HTML5, modular SCSS, and basic UI scripts.
-              </p>
-              <ul class="projects__card-stack" role="list">
-                <li class="projects__card-tag tag">
-                  HTML5
-                </li>
-                <li class="projects__card-tag tag">
-                  SCSS/BEM
-                </li>
-                <li class="projects__card-tag tag">
-                  JavaScript
-                </li>
-                <li class="projects__card-tag tag">
-                  Mobile First
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="projects__card">
-            <a
-              class="projects__card-preview" 
-              href="https://kavaakari.github.io/aurora-craft/"
-              target="_blank"
-              rel="noopener noreferrer"
-              tabindex="-1"
-              aria-hidden="true"
-            >
-              <img
-                class="projects__card-image"
-                src="image/projects/image-card-2.jpg"
-                alt="Project preview"
-                width="800"
-                height="400"
-                loading="lazy"
-              />
-            </a>
-            <div class="projects__card-body">
-              <div class="projects__card-meta">
-                <span class="projects__card-badge">
-                  Commercial
-                </span>
-                <time
-                  class="projects__card-date"
-                  datetime="2026"
-                >
-                  2026
-                </time>
-              </div>
-              <h3 class="projects__card-title">
-                <a
-                  class="projects__card-link"
-                  href="https://github.com/Kavaakari/aurora-craft"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>Aurora Craft</span>
-                </a>
-              </h3>
-              <p class="projects__card-description">
-                Clean editorial page focused on readable typography, responsive layouts, and cross-browser styling. Localized for Turkish-speaking audience.
-              </p>
-              <ul class="projects__card-stack" role="list">
-                <li class="projects__card-tag tag">
-                  HTML5
-                </li>
-                <li class="projects__card-tag tag">
-                  SCSS/BEM
-                </li>
-                <li class="projects__card-tag tag">
-                  JavaScript
-                </li>
-                <li class="projects__card-tag tag">
-                  Mobile First
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li class="projects__card">
-            <a
-              class="projects__card-preview" 
-              href="https://kavaakari.github.io/Magic-River-Quest/"
-              target="_blank"
-              rel="noopener noreferrer"
-              tabindex="-1"
-              aria-hidden="true"
-            >
-              <img
-                class="projects__card-image"
-                src="image/projects/image-card-3.jpg"
-                alt="Project preview"
-                width="800"
-                height="400"
-                loading="lazy"
-              />
-            </a>
-            <div class="projects__card-body">
-              <div class="projects__card-meta">
-                <span class="projects__card-badge">
-                  Commercial
-                </span>
-                <time
-                  class="projects__card-date"
-                  datetime="2026"
-                >
-                  2026
-                </time>
-              </div>
-              <h3 class="projects__card-title">
-                <a
-                  class="projects__card-link"
-                  href="https://kavaakari.github.io/Magic-River-Quest/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>Magic River Quest</span>
-                </a>
-              </h3>
-              <p class="projects__card-description">
-                Responsive landing page built with modern native CSS, fluid clamp-based typography, BEM architecture, and Swiper slider.
-              </p>
-              <ul class="projects__card-stack" role="list">
-                <li class="projects__card-tag tag">
-                  HTML5
-                </li>
-                <li class="projects__card-tag tag">
-                  CSS3
-                </li>
-                <li class="projects__card-tag tag">
-                  JavaScript
-                </li>
-                <li class="projects__card-tag tag">
-                  Mobile First
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="work section-padding-y" id="work">
-      <div class="work__container container">
-        <div class="work__header">
-          <p class="work__subtitle subtitle">
-            Experience
-          </p>
-          <h2 class="work__title">
-            Work History
-          </h2>
-        </div>
-        <article class="work__card">
-          <span class="work__period">Feb 2026 — Sep 2026 · 7 mos</span>
-          <div class="work__heading">
-            <h3 class="work__company">
-              <a 
-                class="work__link"
-                href="https://evoplay.com.ua/uk/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                EvoPlay
-                <svg class="experience__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="7" y1="17" x2="17" y2="7"></line>
-                  <polyline points="7 7 17 7 17 17"></polyline>
-                </svg>
-              </a>
-            </h3>
-            <p class="work__role">Front-end Developer</p>
+        <div class="section-panel">
+          <div class="projects__header">
+            <h2 class="projects__title">
+              Selected Projects
+            </h2>
+            <p class="projects__subtitle">
+              Commercial and personal work built with semantic HTML, modular SCSS, and JavaScript.
+            </p>
           </div>
-          <p class="work__description">
-            Developed responsive, cross-browser web interfaces and promo layouts based on high-fidelity Figma designs, ensuring strict BEM architecture and fluid responsiveness across all screen resolutions.
-          </p>
-          <ul class="work__tags" role="list">
-            <li class="work__tag tag">
-              HTML5 / Semantics
-            </li>
-            <li class="work__tag tag">
-              SCSS / BEM
-            </li>
-            <li class="work__tag tag">
-              JavaScript (ES6+, DOM)
-            </li>
-            <li class="work__tag tag">
-              Figma
-            </li>
-            <li class="work__tag tag">
-              Git
+          <ul class="projects__cards">
+            <li class="projects__card">
+              <article class="project-card card">
+                <div class="project-card__preview">
+                  <a
+                    class="project-card__preview-link"
+                    href="https://kavaakari.github.io/aurora-craft/"
+                    target="_blank"
+                  >
+                    <img
+                      class="project-card__preview-image"
+                      src="image/projects/aurora-craft.webp"
+                      alt="Aurora Craft website preview"
+                      loading="lazy"
+                      width="420"
+                      height="317"
+                    />
+                  </a>
+                </div>
+                <div class="project-card__content">
+                  <span class="project-card__type badge">
+                    Commercial Project
+                  </span>
+                  <h3 class="project-card__title">
+                    <a
+                      class="project-card__title-link"
+                      href="https://kavaakari.github.io/aurora-craft/"
+                      target="_blank"
+                    >
+                      Aurora Craft
+                    </a>
+                  </h3>
+                  <p class="project-card__description">
+                    A responsive landing page built from a Figma design, featuring interactive navigation, modal windows, and an FAQ section, with a focus on usability and cross-device compatibility.
+                  </p>
+                  <ul class="project-card__tech-list">
+                    <li class="project-card__tech-item icon">
+                      <img
+                        class="project-card__tech-icon"
+                        src="image/icons/icon-html.svg"
+                        alt="HTML5"
+                        width="26"
+                        height="26"
+                      />
+                    </li>
+                    <li class="project-card__tech-item icon">
+                      <img
+                        class="project-card__tech-icon"
+                        src="image/icons/icon-sass.svg"
+                        alt="Sass"
+                        width="26"
+                        height="26"
+                      />
+                    </li>
+                    <li class="project-card__tech-item icon">
+                      <img
+                        class="project-card__tech-icon"
+                        src="image/icons/icon-css.svg"
+                        alt="CSS"
+                        width="26"
+                        height="26"
+                      />
+                    </li>
+                    <li class="project-card__tech-item icon">
+                      <img
+                        class="project-card__tech-icon"
+                        src="image/icons/icon-js.svg"
+                        alt="JavaScript"
+                        width="26"
+                        height="26"
+                      />
+                    </li>
+                  </ul>
+                  <div class="project-card__source">
+                    <a
+                      class="project-card__source-link"
+                      href="https://github.com/Kavaakari/aurora-craft"
+                      target="_blank"
+                    >
+                      <img
+                        class="project-card__source-image"
+                        src="image/icons/icon-github.svg"
+                        alt=""
+                        width="26"
+                        height="26"
+                      />
+                      <span class="project-card__source-text">Source</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
             </li>
           </ul>
-        </article>
+        </div>
+      </div>
+    </section>
+    <section class="experience section-padding-y" id="experience">
+      <div class="experience__container container">
+        <div class="section-panel">
+          <div class="experience__header">
+            <h2 class="experience__title">
+              Work Experience
+            </h2>
+          </div>
+          <ul class="experience__cards">
+            <li class="experience__card">
+              <article class="experience-card card">
+                <div class="experience-card__company">
+                  <h3 class="experience-card__company-title">
+                    <a
+                      class="experience-card__company-link"
+                      href="https://evoplay.com.ua/"
+                      target="_blank"
+                    >
+                    EvoPlay
+                    </a>
+                  </h3>
+                  <p class="experience-card__company-period badge">
+                    <time datetime="2026-02">Feb</time>
+                    <span>-</span>
+                    <time datetime="2026-09">Sep 2026</time>
+                  </p>
+                </div>
+                <div class="experience-card__details">
+                  <h4 class="experience-card__position">
+                    Frontend Developer
+                  </h4>
+                  <ul class="experience-card__duties">
+                    <li class="experience-card__duty">
+                      <p class="experience-card__duty-text">
+                        Developed responsive landing pages from scratch based on Figma designs using HTML, CSS, and Sass.
+                      </p>
+                    </li>
+                    <li class="experience-card__duty">
+                      <p class="experience-card__duty-text">
+                        Rebuilt and modernized existing websites, including legacy codebases, by restructuring layouts, fixing bugs, and implementing new features.
+                      </p>
+                    </li>
+                    <li class="experience-card__duty">
+                      <p class="experience-card__duty-text">
+                        Developed interactive UI components, including modals, navigation menus, sliders, and custom JavaScript functionality.
+                      </p>
+                    </li>
+                    <li class="experience-card__duty">
+                      <p class="experience-card__duty-text">
+                        Built websites using AI-powered development tools and visual website builders, combining prompt-based generation with manual customization.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="experience-card__technologies">
+                  <h4 class="experience-card__technologies-title">
+                    Technologies
+                  </h4>
+                  <ul class="experience-card__technologies-list">
+                    <li class="experience-card__technologies-item icon">
+                      <img
+                        class="experience-card__technologies-icon"
+                        src="image/icons/icon-html.svg"
+                        alt="HTML5"
+                        width="26"
+                        height="26"
+                      />
+                    </li>
+                    <li class="experience-card__technologies-item icon">
+                      <img
+                        class="experience-card__technologies-icon"
+                        src="image/icons/icon-js.svg"
+                        alt="JavaScript"
+                        width="26"
+                        height="26"
+                      />
+                    </li>
+                    <li class="experience-card__technologies-item icon">
+                      <img
+                        class="experience-card__technologies-icon"
+                        src="image/icons/icon-sass.svg"
+                        alt="Sass"
+                        width="26"
+                        height="26"
+                      />
+                    </li>
+                    <li class="experience-card__technologies-item icon">
+                      <img
+                        class="experience-card__technologies-icon"
+                        src="image/icons/icon-css.svg"
+                        alt="CSS"
+                        width="26"
+                        height="26"
+                      />
+                    </li>
+                    <li class="experience-card__technologies-item icon">
+                      <img
+                        class="experience-card__technologies-icon"
+                        src="image/icons/icon-figma.svg"
+                        alt="Figma"
+                        width="26"
+                        height="26"
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="skills section-padding-y" id="skills">
+      <div class="skills__container container">
+        <div class="section-panel">
+          <div class="skills__header">
+            <h2 class="skills__title">
+              Skills
+            </h2>
+          </div>
+          <ul class="skills__cards">
+            <li class="skills__card card">
+              <div class="skills__card-header">
+                <span class="skills__card-icon-wrapper icon">
+                  <img
+                    class="skills__card-icon"
+                    src="image/icons/icon-html.svg"
+                    alt=""
+                    width="26"
+                    height="26"
+                  />
+                </span>
+                <h3 class="skills__card-title">
+                  HTML
+                </h3>
+              </div>
+              <p class="skills__card-description">
+                Semantic, accessible and well-structured markup.
+              </p>
+              <ul class="skills__badge-cards">
+                <li class="skills__badge-card">
+                  <span class="skills__badge-text badge">
+                    HTML
+                  </span>
+                </li>
+                <li class="skills__badge-card">
+                  <span class="skills__badge-text badge">
+                    Semantic
+                  </span>
+                </li>
+                <li class="skills__badge-card">
+                  <span class="skills__badge-text badge">
+                    Accessibility
+                  </span>
+                </li>
+              </ul>
+            </li>
+            <li class="skills__card card">
+              <div class="skills__card-header">
+                <span class="skills__card-icon-wrapper icon">
+                  <img
+                    class="skills__card-icon"
+                    src="image/icons/icon-css.svg"
+                    alt=""
+                    width="26"
+                    height="26"
+                  />
+                </span>
+                <h3 class="skills__card-title">
+                  CSS
+                </h3>
+              </div>
+              <p class="skills__card-description">
+                Modern layouts, responsive design and clean, maintainable styles.
+              </p>
+              <ul class="skills__badge-cards">
+                <li class="skills__badge-card">
+                  <span class="skills__badge-text badge">
+                    CSS
+                  </span>
+                </li>
+                <li class="skills__badge-card">
+                  <span class="skills__badge-text badge">
+                    Responsive
+                  </span>
+                </li>
+                <li class="skills__badge-card">
+                  <span class="skills__badge-text badge">
+                    Animation
+                  </span>
+                </li>
+              </ul>
+            </li>
+            <li class="skills__card card">
+              <div class="skills__card-header">
+                <span class="skills__card-icon-wrapper icon">
+                  <img
+                    class="skills__card-icon"
+                    src="image/icons/icon-sass.svg"
+                    alt=""
+                    width="26"
+                    height="26"
+                  />
+                </span>
+                <h3 class="skills__card-title">
+                  Sass
+                </h3>
+              </div>
+              <p class="skills__card-description">
+                Modular and scalable styles with a clear architecture.
+              </p>
+              <ul class="skills__badge-cards">
+                <li class="skills__badge-card">
+                  <span class="skills__badge-text badge">
+                    Mixins
+                  </span>
+                </li>
+                <li class="skills__badge-card">
+                  <span class="skills__badge-text badge">
+                    SCSS
+                  </span>
+                </li>
+                <li class="skills__badge-card">
+                  <span class="skills__badge-text badge">
+                    BEM
+                  </span>
+                </li>
+              </ul>
+            </li>
+            <li class="skills__card card">
+              <div class="skills__card-header">
+                <span class="skills__card-icon-wrapper icon">
+                  <img
+                    class="skills__card-icon"
+                    src="image/icons/icon-js.svg"
+                    alt=""
+                    width="26"
+                    height="26"
+                  />
+                </span>
+                <h3 class="skills__card-title">
+                  JavaScript
+                </h3>
+              </div>
+              <p class="skills__card-description">
+                Interactive interfaces and modern ES features.
+              </p>
+              <ul class="skills__badge-cards">
+                <li class="skills__badge-card">
+                  <span class="skills__badge-text badge">
+                    JavaScript
+                  </span>
+                </li>
+                <li class="skills__badge-card">
+                  <span class="skills__badge-text badge">
+                    DOM
+                  </span>
+                </li>
+                <li class="skills__badge-card">
+                  <span class="skills__badge-text badge">
+                    ES6+
+                  </span>
+                </li>
+              </ul>
+            </li>
+            <li class="skills__card card">
+              <div class="skills__card-header">
+                <span class="skills__card-icon-wrapper icon">
+                  <img
+                    class="skills__card-icon"
+                    src="image/icons/icon-git.svg"
+                    alt=""
+                    width="26"
+                    height="26"
+                  />
+                </span>
+                <h3 class="skills__card-title">
+                  Git
+                </h3>
+              </div>
+              <p class="skills__card-description">
+                Version control and collaborative development.
+              </p>
+              <ul class="skills__badge-cards">
+                <li class="skills__badge-card">
+                  <span class="skills__badge-text badge">
+                    Git
+                  </span>
+                </li>
+                <li class="skills__badge-card">
+                  <span class="skills__badge-text badge">
+                    GitHub
+                  </span>
+                </li>
+                <li class="skills__badge-card">
+                  <span class="skills__badge-text badge">
+                    Workflow
+                  </span>
+                </li>
+              </ul>
+            </li>
+            <li class="skills__card card">
+              <div class="skills__card-header">
+                <span class="skills__card-icon-wrapper icon">
+                  <img
+                    class="skills__card-icon"
+                    src="image/icons/icon-figma.svg"
+                    alt=""
+                    width="26"
+                    height="26"
+                  />
+                </span>
+                <h3 class="skills__card-title">
+                  Figma
+                </h3>
+              </div>
+              <p class="skills__card-description">
+                Working with design layouts and turning them into code.
+              </p>
+              <ul class="skills__badge-cards">
+                <li class="skills__badge-card">
+                  <span class="skills__badge-text badge">
+                    Figma
+                  </span>
+                </li>
+                <li class="skills__badge-card">
+                  <span class="skills__badge-text badge">
+                    Layouts
+                  </span>
+                </li>
+                <li class="skills__badge-card">
+                  <span class="skills__badge-text badge">
+                    Collaboration
+                  </span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   </main>
   <footer class="footer section-padding-y" id="contact">
-  <div class="footer__container container">
-    <div class="footer__card">
-      <div class="footer__top">
-        <div class="footer__heading">
-          <h2 class="footer__title">
-            Looking to strengthen your team? <br>
-            <span>Let’s get in touch.</span>
-          </h2>
+    <div class="footer__container container">
+      <div class="section-panel">
+        <div class="footer__header">
+          <div class="footer__intro">
+            <h2 class="footer__title">
+              <span class="footer__title-accent">Let's work</span> together
+            </h2>
+            <p class="footer__description">
+              Have a project in mind or just want to say hello? Feel free to reach out!
+            </p>
+          </div>
+          <p class="footer__availability">
+            I'm open to new opportunities, collaborations and interesting projects. I'll get back to you as soon as possible.
+          </p>
         </div>
-        <ul class="footer__socials" role="list">
-          <li>
-            <a 
-              class="footer__social-link"
+        <ul class="footer__cards">
+          <li class="footer__card">
+            <a
+              class="footer__card-link"
               href="https://github.com/Kavaakari"
               target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <img 
-                src="image/icon/github.png"
-                alt=""
-                width="32"
-                height="32"
-                loading="lazy"
-              />
-            </a>
-          </li>
-          <li>
-            <a 
-              class="footer__social-link"
-              href="https://t.me/Kava_akari"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Telegram"
-            >
-              <img 
-                src="image/icon/telegram.png"
-                alt=""
-                width="32"
-                height="32"
-                loading="lazy"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=vlad.petruk9@gmail.com"
-              target="_blank"
-              class="footer__social-link"
-              aria-label="Email"
             >
               <img
-                src="image/icon/email.png"
+                class="footer__card-image"
+                src="image/icons/icon-github.svg"
                 alt=""
-                width="32"
-                height="32"
-                loading="lazy"
+                width="36"
+                height="36"
               />
+              <span class="footer__card-text">
+                GitHub
+              </span>
             </a>
           </li>
-          <li>
-            <a 
-              class="footer__social-link"
-              href="assets/cv.pdf"
+          <li class="footer__card">
+            <a
+              class="footer__card-link"
+              href="https://www.linkedin.com/in/vladyslav-petruk-ua/"
               target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Download CV"
             >
-              <img 
-                src="image/icon/cv.png"
+              <img
+                class="footer__card-image"
+                src="image/icons/icon-linkedin.svg"
                 alt=""
-                width="32"
-                height="32"
-                loading="lazy"
+                width="36"
+                height="36"
               />
+              <span class="footer__card-text">
+                LinkedIn
+              </span>
+            </a>
+          </li>
+          <li class="footer__card">
+            <a
+              class="footer__card-link"
+              href="mailto:vlad.petruk9@gmail.com"
+            >
+              <img
+                class="footer__card-image"
+                src="image/icons/icon-email.svg"
+                alt=""
+                width="36"
+                height="36"
+              />
+              <span class="footer__card-text">
+                Email
+              </span>
             </a>
           </li>
         </ul>
-      </div>
-      <div class="footer__bottom">
-        <p class="footer__availability">
-          Available for full-time & remote front-end roles.
-        </p>
-        <p class="footer__copyright">
-          © 2026 Kavaakari. Built with semantic HTML & modular SCSS.
-        </p>
+        <div class="footer__bottom">
+          <div class="footer__identity">
+            <p class="footer__name">
+              Vladyslav Petruk
+            </p>
+            <p class="footer__role">
+              Frontend Developer
+            </p>
+          </div>
+          <small class="footer__copyright">
+            © 2026 Vladyslav Petruk. All rights reserved.
+          </small>
+        </div>
       </div>
     </div>
-  </div>
-</footer>
-  <script src="scripts/main.js"></script>
+  </footer>
+  <script src="scripts/menu.js"></script>
+  <script src="scripts/typewriter.js"></script>
 </body>
 </html>

@@ -1,47 +1,51 @@
 @use 'helpers' as *;
 
-body.is-lock {
-  overflow: hidden;
-}
-
 body {
-  position: relative;
-  min-height: 100dvh;
   font-family: var(--font-family);
-  color: var(--color-gray);
+  color: var(--color-text);
   background-color: var(--color-bg);
-  &::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    
-    background-color: var(--color-bg);
-    background-image:
-      radial-gradient(75rem 50rem at 22% 0%, rgba(242, 134, 178, 0.24), transparent 70%),
-      radial-gradient(65rem 45rem at 78% 14%, rgba(255, 188, 196, 0.18), transparent 70%),
-      radial-gradient(85rem 60rem at 50% 100%, rgba(174, 106, 168, 0.22), transparent 75%),
-      linear-gradient(180deg, #10050e 0%, #1a0913 55%, #0e040d 100%);
-    background-repeat: no-repeat;
+
+  &:has(.burger[aria-expanded="true"]) {
+    overflow: hidden;
   }
 }
 
+section {
+  border-bottom: var(--border);
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+}
+
 h1 {
-  font-size: fluid(32, 64);
+  font-size: fluid(32, 48);
+  color: var(--color-text);
 }
 
 h2 {
-  font-size: fluid(24, 48);
-  font-weight: 400;
-  color: var(--color-white);
+  font-size: fluid(24, 32);
+  color: var(--color-accent-light);
 }
 
 h3 {
-  font-size: fluid(12, 24);
+  font-size: fluid(18, 24);
+  color: var(--color-text-accent);
+}
+
+h4 {
+  font-size: fluid(16, 20);
+  color: var(--color-text);
 }
 
 p {
-  font-family: var(--font-secondary);
-  font-size: fluid(12, 18);
+  font-size: fluid(14, 16);
+  color: var(--color-text-secondary);
 }

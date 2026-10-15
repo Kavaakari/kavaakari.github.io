@@ -1,0 +1,33 @@
+@use '../helpers' as *;
+
+.skills {
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+
+    @include tablet-up {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include laptop-up {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  &__card {
+    @include flex-column(var(--space-sm));
+
+    &-header {
+      display: inline-flex;
+      align-items: center;
+      column-gap: var(--space-sm);
+    }
+  }
+
+  &__badge-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+}

@@ -1,121 +1,100 @@
 @use '../helpers' as *;
 
 .projects {
-  &__container {
-    display: flex;
-    flex-direction: column;
-    row-gap: fluid(32, 48);
-  }
-
   &__header {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    row-gap: var(--space-sm);
+  }
+}
+
+.project-card {
+  @include flex-column(var(--space-lg));
+
+  @include tablet-up {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+  }
+
+  &__content {
+    @include flex-column(var(--space-md));
+    justify-content: center;
+  }
+
+  &__type {
+    align-self: flex-start;
   }
 
   &__title {
-    font-weight: 400;
-    color: var(--color-white);
-  }
+    &-link {
+      column-gap: rem(8);
+      color: inherit;
+      transition: 
+        transform var(--transition-fast), 
+        color var(--transition-fast);
 
-  &__cards {
-    display: flex;
-    flex-direction: column;
-    row-gap: rem(24);
-  }
-
-  &__card {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--color-card);
-    border: rem(1) solid rgba(106, 60, 82, 0.8);
-    border-radius: var(--border-radius-md);
-    overflow: hidden;
-    box-shadow: 
-      0 rem(16) rem(40) rgba(255, 153, 194, 0.08),
-      0 0 rem(24) rgba(255, 153, 194, 0.04);
-    transition: 
-      transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
-      box-shadow 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
-
-    @include tablet-up {
-      display: grid;
-      grid-template-columns: 45% 55%;
-    }
-
-    @include hover {
-      transform: translateY(rem(4)) scale(0.98);
-
-      box-shadow: 
-        0 rem(4) rem(14) rgba(255, 153, 194, 0.18),
-        0 0 rem(12) rgba(255, 153, 194, 0.12);
-    }
-
-    &-preview {
-      aspect-ratio: 10 / 6;
-
-      @include tablet-up {
-        aspect-ratio: 12 / 11;
+      &::after {
+        content: '';
+        width: rem(8);
+        height: rem(10);
+        background-color: currentColor;
+        clip-path: var(--arrow-right);
+        transform: rotate(-135deg);
       }
 
-      @include laptop-up {
-        aspect-ratio: 16 / 11;
+      @include hover {
+        transform: scale(1.03);
+        color: var(--color-accent-light);
       }
     }
+  }
 
+  &__preview {
     &-image {
-      transition: transform 0.3s ease;
+      border-radius: var(--border-radius-md);
+      aspect-ratio: 1675 / 1263;
+      transition: transform var(--transition-fast);
+
       @include hover {
         transform: scale(1.02);
       }
     }
+  }
 
-    &-body {
-      display: flex;
-      flex-direction: column;
-      padding: fluid(14, 24) fluid(16, 30);
-      row-gap: rem(14);
-    }
+  &__tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(16);
+  }
 
-    &-meta {
-      display: flex;
-      align-items: center;
-      column-gap: rem(12);
-      font-size: fluid(12, 18);
-      font-family: var(--font-tertiary);
-      text-transform: uppercase;
-    }
 
-    &-badge {
-      color: var(--color-pink);
-      padding: rem(4) rem(8);
-      background-color: rgba(255, 153, 194, 0.08);
-      border: rem(1) solid rgba(255, 153, 194, 0.25);;
-      border-radius: var(--border-radius-md);
-    }
+  &__source-link {
+    column-gap: rem(8);
+    color: var(--color-text);
 
-    &-date {
-      opacity: 0.8;
-    }
+    transition: 
+      transform var(--transition-fast),
+      color var(--transition-fast);
 
-    &-link {
-      transition: color .3s ease;
-
-      @include hover {
-        color: var(--color-pink-light);
-      }
-    }
-
-    &-link {
-      color: var(--color-white);
-      text-decoration: none;
-    }
-
-    &-stack {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: auto;
-      gap: rem(24);
+    @include hover {
+      transform: scale(1.02);
+      color: var(--color-text-accent);
     }
   }
+
+  &__source-text {
+    display: inline-flex;
+    column-gap: rem(4);
+
+    &::after {
+      content: '';
+      width: rem(8);
+      height: rem(10);
+      background-color: currentColor;
+      clip-path: var(--arrow-right);
+      transform: rotate(-135deg);
+    }
+  }
+
 }

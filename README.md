@@ -1,21 +1,50 @@
-# Vladyslav Petruk - Front-end Developer Portfolio
+# Vladyslav Petruk — Frontend Portfolio
 
-> Personal portfolio showcasing responsive, high-performance web layouts built with semantic HTML5, modular SCSS (BEM), and vanilla JavaScript.
+Personal portfolio website showcasing my frontend development projects, professional experience, technical skills, and contact information.
 
-## 🔗 Live Site
-- **[kavaakari.github.io](https://kavaakari.github.io/)**
+## Live Website
 
-## 💼 Featured Projects
-- **[Tempo Valley](https://kavaakari.github.io/tempo-valley/)** - Promo landing page built with semantic HTML5 and modular SCSS.
-- **[Aurora Craft](https://kavaakari.github.io/aurora-craft/)** - Editorial landing page focused on clean typography and cross-browser styling.
-- **[Magic River Quest](https://kavaakari.github.io/magic-river-quest/)** - Responsive landing page with native CSS, fluid `clamp()` sizing, and Swiper.js.
+https://kavaakari.github.io/
 
-## 🛠 Core Toolkit
-- **Markup:** HTML5 / Semantics, accessibility basics (ARIA)
-- **Styling:** SCSS / CSS3, BEM Architecture, Fluid RWD, Modern CSS logic
-- **Scripting:** Vanilla JavaScript / DOM manipulation
-- **Tools:** Git, GitHub Pages, Figma (Dev Mode)
+## Technologies
 
-## 📬 Contact
-- **Telegram:** [@Kava_akari](https://t.me/Kava_akari)
-- **Email:** vlad.petruk9@gmail.com
+HTML5 · CSS3 · Sass (SCSS) · JavaScript (ES6+) · BEM · Git
+
+## Features
+
+- Responsive layouts for mobile, tablet, and desktop devices.
+- Mobile navigation with interactive burger menu.
+- Typewriter text animation.
+- Project showcase with live demos and source code.
+- Professional experience and technical skills sections.
+- PDF resume accessible directly from the website.
+
+## Featured Project
+
+**Aurora Craft** — A responsive landing page developed from a Figma design, featuring interactive navigation, modal windows, and an FAQ section.
+
+[Live Demo](https://kavaakari.github.io/aurora-craft/) | [Source Code](https://github.com/Kavaakari/aurora-craft)
+
+## Project Structure
+
+`index.html` — Main HTML document
+
+`scss/` — Modular Sass stylesheets
+
+`css/` — Compiled CSS
+
+`scripts/` — JavaScript functionality
+
+`image/` — Project images, icons, and favicon
+
+`fonts/` — Local web fonts
+
+`assets/cv/` — PDF resume
+
+## Contact
+
+**GitHub:** https://github.com/Kavaakari
+
+**LinkedIn:** https://www.linkedin.com/in/vladyslav-petruk-ua/
+
+**Email:** vlad.petruk9@gmail.com

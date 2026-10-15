@@ -1,10 +1,6 @@
 @use 'helpers' as *;
 @use 'variables' as *;
 
-section[id] {
-  scroll-margin-top: calc(var(--header-height) + rem(8));
-}
-
 .container {
   width: 100%;
   max-width: #{rem($container-width + $container-padding-max * 2)};
@@ -12,24 +8,89 @@ section[id] {
   padding-inline: var(--container-padding-x);
 }
 
-.subtitle {
-  font-size: rem(12);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--color-pink-light);
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
 }
 
 .section-padding-y {
   padding-block: var(--section-padding-y);
 }
 
-.tag {
-  white-space: nowrap;
-  font-family: var(--font-tertiary);
-  font-size: fluid(11, 14);
-  color: var(--color-pink-light);
-  padding: rem(4) rem(8);
-  background-color: var(--color-panel);
-  border: rem(1) solid rgba(106, 60, 82, 0.3);
+.section-panel {
+  @include flex-column(var(--space-lg));
+
+  background-color: var(--color-surface);
+  border: var(--border);
+  border-radius: var(--border-radius-md);
+  padding: fluid(20, 32);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: fluid(12, 14);
+  padding: rem(5) rem(10);
+  border: var(--border);
   border-radius: var(--border-radius-sm);
+  background-color: var(--color-surface);
+  color: var(--color-text-secondary);
+}
+
+.card {
+  position: relative;
+  background-color: var(--color-card);
+  border: var(--border);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow);
+  
+  padding: fluid(24, 32);
+
+  transition: box-shadow var(--transition-base);
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: var(--box-shadow-inset);
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity var(--transition-base);
+  }
+
+  @include hover {
+    box-shadow: none;
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.icon {
+  @include flex-center(true);
+
+  width: rem(50);
+  height: rem(50);
+  border-radius: 50%;
+  border: rem(1) solid transparent;
+
+  background-color: var(--color-surface);
+
+  box-shadow: var(--box-shadow-inset);
+  transition: border-color var(--transition-fast);
+
+  @include hover {
+    border-color: var(--color-accent-light);
+  }
 }

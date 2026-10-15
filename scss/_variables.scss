@@ -1,37 +1,80 @@
 @use 'helpers' as *;
 
 $container-width: 1280;
-$container-padding-max: 80;
+$container-padding-max: 32;
 $container-padding-min: 16;
 
 :root {
-  --font-family: 'Cormorant Garamond', serif;
-  --font-secondary: 'Manrope', sans-serif;
-  --font-tertiary: 'JetBrains Mono', monospace;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-second: 'JetBrains Mono', monospace;
 
-  --color-bg: #140911;
-  --color-bg-top: #10050E;
-  --color-bg-mid: #1A0913;
-  --color-bg-bottom: #0E040D;
+  --color-bg: #0e0820;
+  --color-surface: #150d30;
+  --color-card: #1c1238;
+  --color-card-hover: #291b4b;
 
-  --color-card: #2A1522;
-  --color-panel: #23121D;
-  --color-secondary: #331A28;
+  --color-border: #53358a;
+  --color-border-light: #7951b1;
 
-  --color-white: #F8EFF4;
-  --color-gray: #C1A9B8;
-  --color-dark: #241019;
+  --color-text: #f4f0ff;
+  --color-text-secondary: #b9aed0;
+  --color-text-muted: #8c7fa6;
+  --color-text-accent: #bc8cff;
 
-  --color-pink: #FF99C2;
-  --color-pink-light: #FFBCC4;
-  --color-pink-dark: #6A3C52;
+  --color-accent-light: #c8a0ff;
+  --color-accent: #a66df5;
+  --color-accent-dark: #9561e8;
 
+  --color-button-primary: #783fd4;
+  --color-button-primary-hover: #8246d8;
+  --color-button-primary-border: #a66df5;
+
+  --color-success: #34d399;
+  --color-error: #f87171;
+
+  --color-shadow: rgb(0 0 0 / 80%);
+
+  --color-header-bg: color-mix(
+    in srgb,
+    var(--color-surface) 65%,
+    transparent
+  );
+
+  --color-shadow-accent: color-mix(
+    in srgb,
+    var(--color-accent) 30%,
+    transparent
+  );
+
+  --border: #{rem(1)} solid var(--color-border);
+  --border-radius-sm: #{rem(16)};
+  --border-radius-md: #{rem(32)};
+
+  --box-shadow:
+    -6px -6px 14px var(--color-shadow-accent),
+    6px 6px 16px var(--color-shadow);
+
+  --box-shadow-inset:
+    inset 0 0 24px 10px var(--color-shadow),
+    inset -6px -6px 12px var(--color-shadow-accent);
+
+  --arrow-right: polygon(
+    43% 5%, 57% 5%,
+    57% 70%,
+    95% 55%, 100% 55%,
+    50% 100%,
+    0% 55%, 5% 55%,
+    43% 70%
+  );
+  
   --container-padding-x: #{fluid($container-padding-min, $container-padding-max)};
 
-  --section-padding-y: #{fluid(30, 80)};
+  --section-padding-y: #{fluid(64, 96)};
 
-  --header-height: #{fluid(65, 85)};
+  --space-sm: #{fluid(8, 12)};
+  --space-md: #{fluid(16, 24)};
+  --space-lg: #{fluid(24, 40)};
 
-  --border-radius-sm: #{rem(14)};
-  --border-radius-md: #{rem(22)};
+  --transition-fast: .2s ease;
+  --transition-base: .3s ease;
 }

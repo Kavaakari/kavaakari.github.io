@@ -1,123 +1,103 @@
 @use '../helpers' as *;
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
   z-index: 50;
   padding-block: fluid(12, 24);
+  border-bottom: var(--border);
+  background-color: rgba(21, 13, 48, 0.65);
+  background-color: var(--color-header-bg);
+  backdrop-filter: blur(rem(10));
 
-  background-color: rgba(20, 9, 17, 0.75);
-  -webkit-backdrop-filter: blur(rem(12));
-  backdrop-filter: blur(rem(12));
-
-  border-bottom: rem(1) solid rgba(106, 60, 82, 0.45);
-
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__logo,
-  &__burger {
-    position: relative;
-    z-index: 30;
+  &:has(.burger[aria-expanded="true"]) .menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   &__logo {
-    font-size: fluid(20, 24);
-    font-family: var(--font-family);
-    color: var(--color-pink-light);
-    text-decoration: none;
-    transition: color .3s ease;
-
-    @include hover {
-      color: var(--color-white);
+    justify-self: start;
+    
+    &-icon {
+      transition: transform var(--transition-base);
+      
+      @include hover {
+        transform: scale(1.05);
+        outline: var(--border);
+      }
     }
   }
-}
 
-.menu {
-  &__list {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    @include tablet-down {
+      grid-template-columns: 1fr auto;
+    }
+  }
+
+  &__status {
     display: flex;
     align-items: center;
-    column-gap: rem(32);
+    justify-self: end;
+    column-gap: rem(8);
   }
 
-  &__link {
-    font-family: var(--font-secondary);
-    font-size: rem(14);
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--color-gray);
-    text-decoration: none;
-    transition: color .3s ease;
-
-    @include hover {
-      color: var(--color-pink-light);
-    }
+  &__dot {
+    width: rem(8);
+    height: rem(8);
+    border-radius: 50%;
+    background-color: var(--color-success);
+    animation: pulse 1.2s infinite ease-out;
   }
 
-  @include tablet-down {
-    @include flex-center;
+  &__text {
+    color: var(--color-text-secondary);
+  }
 
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: calc(100dvh - 100%);
-    background-color: rgba(35, 18, 29, 0.9);
-    -webkit-backdrop-filter: blur(rem(16));
-    backdrop-filter: blur(rem(16));
-    z-index: 20;
-    overflow-y: auto;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity .3s ease, visibility .3s ease;
+  &__burger {
+    display: none;
 
-    &.is-open {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-    }
-
-    &__list {
-      flex-direction: column;
-      row-gap: rem(32);
-      column-gap: 0;
-    }
-
-    &__link {
-      font-size: rem(18);
+    @include tablet-down {
+      display: block;
     }
   }
 }
 
 .burger {
-  @include flex-center;
-
-  width: rem(40);
-  height: rem(40);
-  padding: 0;
-  border: none;
+  position: relative;
   background-color: transparent;
-  cursor: pointer;
+  border: none;
+  padding: rem(0);
+  width: rem(44);
+  height: rem(44);
 
-  @include tablet-up {
-    display: none;
+  &[aria-expanded="true"] .burger__line {
+    background-color: transparent;
+
+    &::before {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      top: 0;
+      transform: rotate(45deg);
+    }
   }
 
   &__line {
-    position: relative;
-    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: rem(24);
     height: rem(2);
-    border-radius: rem(2);
-    background-color: var(--color-pink-light);
-    transition: background-color .3s ease;
+    background-color: var(--color-text);
+    transition: background-color var(--transition-base);
 
     &::before,
     &::after {
@@ -126,9 +106,10 @@
       left: 0;
       width: 100%;
       height: 100%;
-      border-radius: inherit;
-      background-color: var(--color-pink-light);
-      transition: top .3s ease, transform .3s ease;
+      background-color: var(--color-text);
+      transition: 
+        top var(--transition-base),
+        transform var(--transition-base);
     }
 
     &::before {
@@ -139,18 +120,89 @@
       top: rem(8);
     }
   }
+}
 
-  &.is-active &__line {
-    background-color: transparent;
+.menu {
+  display: contents;
 
-    &::before {
-      top: 0;
-      transform: rotate(45deg);
+  @include tablet-down {
+    position: absolute;
+    top: calc(100% + rem(1));
+    left: 0;
+    width: 100%;
+    height: 50dvh;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+    padding: rem(20);
+    
+    background-color: var(--color-surface);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: 
+      opacity var(--transition-base), 
+      visibility var(--transition-base), 
+      transform var(--transition-base);
+
+    overflow-y: auto;
+    z-index: -1;
+  }
+
+  &__list {
+    display: flex;
+    gap: rem(20);
+
+    @include tablet-down {
+      flex-direction: column;
     }
+  }
 
-    &::after {
-      top: 0;
-      transform: rotate(-45deg);
+  &__item {
+    position: relative;
+    
+    @include tablet-down {      
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: rem(1);
+        background-color: var(--color-border);
+      }
     }
+  }
+
+  &__link {
+    display: block;
+    font-size: fluid(14, 18);
+    color: var(--color-text-secondary);
+    transition: 
+      transform var(--transition-fast),
+      color var(--transition-fast);
+    padding-block: rem(12);
+
+    @include hover {
+      transform: scale(1.05);
+      color: var(--color-text-accent);
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 
+    color-mix(in srgb, var(--color-success) 25%, transparent);
+  }
+
+  70% {
+    box-shadow: 0 0 0 rem(1) 
+      color-mix(in srgb, var(--color-success) 55%, transparent);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rem(5) transparent;
   }
 }
