@@ -1,4 +1,4 @@
-# Vladyslav Petruk — Frontend Portfolio
+# Vladyslav Petruk - Frontend Portfolio
 
 Personal portfolio website showcasing my frontend development projects, professional experience, technical skills, and contact information.
 
@@ -21,25 +21,25 @@ HTML5 · CSS3 · Sass (SCSS) · JavaScript (ES6+) · BEM · Git
 
 ## Featured Project
 
-**Aurora Craft** — A responsive landing page developed from a Figma design, featuring interactive navigation, modal windows, and an FAQ section.
+**Aurora Craft** - A responsive landing page developed from a Figma design, featuring interactive navigation, modal windows, and an FAQ section.
 
 [Live Demo](https://kavaakari.github.io/aurora-craft/) | [Source Code](https://github.com/Kavaakari/aurora-craft)
 
 ## Project Structure
 
-`index.html` — Main HTML document
+`index.html` - Main HTML document
 
-`scss/` — Modular Sass stylesheets
+`scss/` - Modular Sass stylesheets
 
-`css/` — Compiled CSS
+`css/` - Compiled CSS
 
-`scripts/` — JavaScript functionality
+`scripts/` - JavaScript functionality
 
-`image/` — Project images, icons, and favicon
+`image/` - Project images, icons, and favicon
 
-`fonts/` — Local web fonts
+`fonts/` - Local web fonts
 
-`assets/cv/` — PDF resume
+`assets/cv/` - PDF resume
 
 ## Contact
 
